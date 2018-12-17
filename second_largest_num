@@ -1,0 +1,19 @@
+n = int(input())
+arr = map(int, input().split())
+#The returned value from map() (map object) then can be passed to functions like list() (to create a list), set() (to create a set)
+list_num=(list(arr))
+#print(list_num)
+list_num_second=[]
+max_num=0
+running_up_num=0
+for num in list_num:
+    if num>=max_num:
+        max_num=num
+for num in list_num:
+    if num !=max_num:
+        list_num_second.append(num)
+#print (list_num_second)
+for num in list_num_second:
+    if num>=running_up_num:
+        running_up_num=num
+print (running_up_num)
